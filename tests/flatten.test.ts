@@ -3,10 +3,12 @@ import { flatten } from '../src/flatten'
 
 describe('flatten', () => {
   test('flattens nested arrays', () => {
-    // TODO: implement test
+    const result = flatten([1, [2, 3], [4, [5, 6]]])
+    expect(result).toEqual([1, 2, 3, 4, 5, 6])
   })
 
   test('handles deeply nested arrays', () => {
-    // TODO: implement test
+    const result = flatten([1, [2, [3, [4, [5]]]]])
+    expect(result).toEqual([1, 2, 3, 4, 5])
   })
 })

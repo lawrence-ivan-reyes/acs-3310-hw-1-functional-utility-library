@@ -3,10 +3,12 @@ import { chunk } from '../src/chunk'
 
 describe('chunk', () => {
   test('splits array into groups of specified size', () => {
-    // TODO: implement test
+    const result = chunk([1, 2, 3, 4, 5], 2)
+    expect(result).toEqual([[1, 2], [3, 4], [5]])
   })
 
   test('handles arrays that divide evenly', () => {
-    // TODO: implement test
+    const result = chunk([1, 2, 3, 4, 5, 6], 3)
+    expect(result).toEqual([[1, 2, 3], [4, 5, 6]])
   })
 })
